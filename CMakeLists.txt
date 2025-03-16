@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(ATmega328P_Simulator LANGUAGES CXX)
 
-# Enable C++17
-set(CMAKE_CXX_STANDARD 17)
+# Enable C++11
+# Based on the assumption that SystemC 2.3.4 supports C++11 only.
+# Observation: Latest Head of SystemC package works with C++17.
+set(CMAKE_CXX_STANDARD 11) 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Set SystemC path (submodule location)
